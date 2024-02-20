@@ -560,5 +560,9 @@ cmp.setup {
   },
 }
 
+-- Add relative linenumber settings:
+-- https://samolusola.me/how-to-enable-relative-line-numbers-in-vim-or-neovim
+ vim.wo.relativenumber = true
+
 -- The line beneath this is called `modeline`. See `:help modeline`
 -- vim: ts=2 sts=2 sw=2 et
