@@ -252,6 +252,9 @@ require('lazy').setup {
     },
   },
 
+  -- install gruvbox:
+  { 'ellisonleao/gruvbox.nvim', priority = 1000, config = true, opts = ... },
+
   -- NOTE: Plugins can also be configured to run lua code when they are loaded.
   --
   -- This is often very useful to both group configuration, as well as handle
@@ -721,12 +724,12 @@ require('lazy').setup {
     -- change the command in the config to whatever the name of that colorscheme is
     --
     -- If you want to see what colorschemes are already installed, you can use `:Telescope colorscheme`
-    'folke/tokyonight.nvim',
+    'ellisonleao/gruvbox.nvim',
     lazy = false, -- make sure we load this during startup if it is your main colorscheme
     priority = 1000, -- make sure to load this before all the other start plugins
     config = function()
       -- Load the colorscheme here
-      vim.cmd.colorscheme 'tokyonight-night'
+      vim.cmd.colorscheme 'gruvbox'
 
       -- You can configure highlights by doing something like
       vim.cmd.hi 'Comment gui=none'
@@ -819,7 +822,7 @@ require('lazy').setup {
 
 -- Add relative linenumber settings:
 -- https://samolusola.me/how-to-enable-relative-line-numbers-in-vim-or-neovim
- vim.wo.relativenumber = true
+vim.wo.relativenumber = true
 
 -- The line beneath this is called `modeline`. See `:help modeline`
 -- vim: ts=2 sts=2 sw=2 et
